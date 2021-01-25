@@ -4,7 +4,7 @@ namespace App\Model\Admin;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Band extends Model
+class Brand extends Model
 {
     protected $fillable = [
         'brand_name', 'brand_logo'
