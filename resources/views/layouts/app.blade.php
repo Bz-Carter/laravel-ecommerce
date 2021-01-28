@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="{{ asset('public/assets/css/plugins/magnific-popup.css')}}">
     <link rel="stylesheet" href="{{ asset('public/assets/css/plugins/jquery-ui.css')}}">
     <link rel="stylesheet" href="{{ asset('public/assets/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
+
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above
     <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
@@ -301,6 +303,30 @@
 <script src="assets/js/plugins/plugins.min.js"></script>  -->
     <!-- Main JS -->
     <script src="{{ asset('public/assets/js/main.js') }}"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="{{ asset('https://unpkg.com/sweetalert/dist/sweetalert.min.js')}}"></script>
+
+
+    <script>
+        @if(Session::has('messege'))
+          var type="{{Session::get('alert-type','info')}}"
+          switch(type){
+              case 'info':
+                   toastr.info("{{ Session::get('messege') }}");
+                   break;
+              case 'success':
+                  toastr.success("{{ Session::get('messege') }}");
+                  break;
+              case 'warning':
+                 toastr.warning("{{ Session::get('messege') }}");
+                  break;
+              case 'error':
+                  toastr.error("{{ Session::get('messege') }}");
+                  break;
+          }
+        @endif
+     </script>  
 
 </body>
 

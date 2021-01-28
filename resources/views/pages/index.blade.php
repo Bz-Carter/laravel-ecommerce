@@ -2117,17 +2117,14 @@
                 <div class="col-lg-7 col-md-7">
                     <div id="mc_embed_signup" class="subscribe-form-2">
                         <form id="mc-embedded-subscribe-form" class="validate subscribe-form-style-2" novalidate=""
-                            target="_blank" name="mc-embedded-subscribe-form" method="post"
-                            action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef">
+                             name="mc-embedded-subscribe-form" method="post"
+                            action="{{ route('store.newslater') }}">
+                            @csrf
                             <div id="mc_embed_signup_scroll" class="mc-form-2">
-                                <input class="email" type="email" required="" placeholder="Enter your email address"
-                                    name="EMAIL" value="">
-                                <div class="mc-news-2" aria-hidden="true">
-                                    <input type="text" value="" tabindex="-1" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef">
-                                </div>
+                                <input class="email" type="email" required="required" placeholder="Enter your email address"
+                                    name="email">
                                 <div class="clear-2 clear-2-purple">
-                                    <input id="mc-embedded-subscribe" class="button" type="submit" name="subscribe"
-                                        value="Subscribe">
+                                    <input id="mc-embedded-subscribe" class="button" type="submit" name="subscribe">
                                 </div>
                             </div>
                         </form>
