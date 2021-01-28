@@ -38,3 +38,11 @@ Route::post('admin/store/brand', 'Admin\Category\BrandController@storebrand')->n
 Route::get('delete/brand/{id}', 'Admin\Category\BrandController@deletebrand');
 Route::get('edit/brand/{id}', 'Admin\Category\BrandController@editbrand');
 Route::post('update/brand/{id}', 'Admin\Category\BrandController@updatebrand');
+
+
+// subcategory
+Route::get('admin/sub/category', 'Admin\Category\SubCategoryController@subcategories')->name('sub.categories');
+Route::post('admin/store/subcat', 'Admin\Category\SubCategoryController@storesubcat')->name('store.subcategory');
+Route::get('delete/subcategory/{id}', 'Admin\Category\SubCategoryController@deletesubcat');
+Route::get('edit/subcategory/{id}', 'Admin\Category\SubCategoryController@editsubcat');
+Route::post('update/subcategory/{id}', 'Admin\Category\SubCategoryController@updatesubcat');
